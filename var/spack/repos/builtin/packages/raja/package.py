@@ -132,6 +132,7 @@ class Raja(CachedCMakePackage, CudaPackage, ROCmPackage):
         if "+rocm" in spec:
             entries.append(cmake_cache_option("ENABLE_HIP", True))
             entries.append(cmake_cache_path("HIP_ROOT_DIR", "{0}".format(spec["hip"].prefix)))
+            entries.append(cmake_cache_path("ROCPRIM_DIR", "{0}".format(spec["rocprim"].prefix)))
             hip_repair_cache(entries, spec)
             hipcc_flags = []
             if self.spec.satisfies("@0.14.0"):
