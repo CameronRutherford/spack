@@ -10,6 +10,8 @@ class Resolve(CMakePackage, CudaPackage, ROCmPackage):
     """ReSolve is a library of GPU-resident sparse linear solvers. It contains iterative and direct
     solvers designed to run on NVIDIA and AMD GPUs, as well as CPU devices."""
 
+    # Test comment
+
     homepage = "https://github.com/ORNL/ReSolve"
     git = "https://github.com/ORNL/ReSolve.git"
 
